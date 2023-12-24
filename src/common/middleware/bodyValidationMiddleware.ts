@@ -1,0 +1,21 @@
+import debug from 'debug';
+import express from 'express';
+import { validationResult } from 'express-validator';
+
+const debugLog : debug.IDebugger = debug('bodyValidationMiddleware: ')
+class BodyValidationMiddleware {
+    verifyBodyFieldsErrors(
+        req: express.Request,
+        res: express.Response,
+        next: express.NextFunction
+    ) {
+        debugLog("bodyValidationMiddleware Started")
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).send({ errors: errors.array() });
+        }
+        next();
+    }
+}
+
+export default new BodyValidationMiddleware();

@@ -1,0 +1,35 @@
+{
+  "name": "waterludo_backend",
+  "version": "1.0.0",
+  "description": "Backend for Water Ludo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
+    "debug": "set DEBUG=* && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express-validator": "^3.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/winston": "^2.4.4",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "express-winston": "^4.2.0",
+    "mongoose": "^8.0.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/debug": "^4.1.12",
+    "@types/express": "^4.17.21",
+    "source-map-support": "^0.5.21",
+    "tslint": "^6.1.3",
+    "typescript": "^5.3.3"
+  }
+}
